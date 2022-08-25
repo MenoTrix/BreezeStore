@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/menotrix.github.io/breezestore/static/css/main.19eccee4.css",
-    "main.js": "/menotrix.github.io/breezestore/static/js/main.2d9c94fa.js",
-    "static/media/232.jpg": "/menotrix.github.io/breezestore/static/media/232.38a2ceebb514ace0d870.jpg",
-    "static/media/logo2.svg": "/menotrix.github.io/breezestore/static/media/logo2.3026c22492ccfd6ac6fe0bec13963787.svg",
-    "static/media/logo.svg": "/menotrix.github.io/breezestore/static/media/logo.6f5b72421c1d1b6b4eb935ba8fad9725.svg",
-    "static/media/slick.svg": "/menotrix.github.io/breezestore/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/menotrix.github.io/breezestore/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/menotrix.github.io/breezestore/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/menotrix.github.io/breezestore/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/menotrix.github.io/breezestore/index.html",
-    "main.19eccee4.css.map": "/menotrix.github.io/breezestore/static/css/main.19eccee4.css.map",
-    "main.2d9c94fa.js.map": "/menotrix.github.io/breezestore/static/js/main.2d9c94fa.js.map"
+    "main.css": "/breezestore/static/css/main.37f437ec.css",
+    "main.js": "/breezestore/static/js/main.488d4ed8.js",
+    "static/media/232.jpg": "/breezestore/static/media/232.38a2ceebb514ace0d870.jpg",
+    "static/media/logo2.svg": "/breezestore/static/media/logo2.3026c22492ccfd6ac6fe0bec13963787.svg",
+    "static/media/logo.svg": "/breezestore/static/media/logo.6f5b72421c1d1b6b4eb935ba8fad9725.svg",
+    "static/media/slick.svg": "/breezestore/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/breezestore/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/breezestore/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/breezestore/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/breezestore/index.html",
+    "main.37f437ec.css.map": "/breezestore/static/css/main.37f437ec.css.map",
+    "main.488d4ed8.js.map": "/breezestore/static/js/main.488d4ed8.js.map"
   },
   "entrypoints": [
-    "static/css/main.19eccee4.css",
-    "static/js/main.2d9c94fa.js"
+    "static/css/main.37f437ec.css",
+    "static/js/main.488d4ed8.js"
   ]
 }
