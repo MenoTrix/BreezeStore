@@ -68,7 +68,7 @@ function App() {
                 <Route path="addedmeal" element={<Newlyadded />} />
                 <Route path="search/:id" element={<Search />} />
                 <Route path="forgotpassword" element={<ForgotPassword />} />
-                <Route path="adminpanel" element={<HomeAdmin />} />
+                {/* <Route path="adminpanel" element={<HomeAdmin />} />
                 <Route path="adminpanel/keto" element={<KetoAdmin />}></Route>
                 <Route path="adminpanel/vegan" element={<VeganAdmin />}></Route>
                 <Route
@@ -81,9 +81,8 @@ function App() {
                   element={<FruitsAdmin />}
                 ></Route>
                 <Route path="adminpanel/bake" element={<BakeAdmin />}></Route>
-                <Route path="adminpanel/meat" element={<MeatAdmin />}></Route>
-                {/* <Route path="/" element={<HomeAdmin />}></Route> */}
-                <Route path="/adminpaneltest" element={<HomeAdmin />}></Route>
+                <Route path="adminpanel/meat" element={<MeatAdmin />}></Route> */}
+                {/* <Route path="/adminpaneltest" element={<HomeAdmin />}></Route> */}
                 <Route
                   path="adminpaneltest/vegetables"
                   element={<VegetablesAdmin />}
