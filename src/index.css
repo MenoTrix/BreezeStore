@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Koulen&family=Poppins:wght@100;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-color {
+  color: #00588f !important;
+}
+
+.bg-color {
+  background-color: #00588f !important;
+}
+.hover-effect
+{
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.hover-effect:hover
+{
+  transform: translateY(-2%);
+}
+
+.h-img
+{
+  height: 300px;
+  transition: all 0.3s;
+}
+.h-img:hover
+{
+  transform: scale(1.02);
+}
+
+
+

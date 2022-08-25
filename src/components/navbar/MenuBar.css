@@ -1,0 +1,53 @@
+.icon-style {
+  color: #00588f;
+  font-size: 30px;
+  padding-right: 10px;
+}
+
+.bt-style {
+  color: #fff !important;
+  padding-left: 20px;
+}
+.bt-style {
+  /* color: #658f00 !important; */
+  color: #fff !important;
+}
+
+.count-parent {
+  color: #00588f;
+  /* color: #0a472e; */
+  font-size: 40px;
+  position: relative;
+}
+.cart-count {
+  position: absolute;
+  top: -17px;
+  right: 3px;
+  font-size: 16px;
+  color: white;
+  background-color: #dfb178;
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+}
+
+.wish-count {
+  position: absolute;
+  top: -17px;
+  right: -10px;
+  font-size: 16px;
+  color: white;
+  background-color: #dfb178;
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+}
+
+/* img{
+  width: 200px;
+  height: 110px;
+} */
+.svgImage{
+  width: 200px;
+  height: 90px;
+}
