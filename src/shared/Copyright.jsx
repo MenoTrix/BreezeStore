@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Copyright = () => {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      {"Copyright Breeze © "}
+      {"Copyright  © "}
       <Link className="text-color" to={"/"}>
-        Your Website
+        Breeze
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
