@@ -8,6 +8,7 @@ import {
   onAuthStateChanged,
   signInWithPopup,
   GoogleAuthProvider,
+  FacebookAuthProvider,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -33,6 +34,11 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const logOut = () => {
+    localStorage.removeItem("firstname");
+    localStorage.removeItem("lastname");
+    // localStorage.removeItem("name");
+    localStorage.removeItem("photo");
+    localStorage.removeItem("email");
     return signOut(auth);
   };
 
@@ -53,7 +59,15 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ signUp, login, logOut, user, resetPassword, signInWithGoogle }}
+      value={{
+        signUp,
+        login,
+        logOut,
+        user,
+        resetPassword,
+        signInWithGoogle,
+        signInWithFacebook,
+      }}
     >
       {children}
     </AuthContext.Provider>
@@ -64,15 +78,39 @@ export const UserAuth = () => {
   return useContext(AuthContext);
 };
 
+const navigate = useNavigate;
+
+export const signInWithFacebook = () => {
+  const provider = new FacebookAuthProvider();
+  signInWithPopup(auth, provider)
+    .then((re) => {
+      console.log(re);
+      const firstname = re._tokenResponse.firstName;
+      const lastname = re._tokenResponse.lastName;
+      const email = re.user.email;
+      const photo = re.user.photoURL;
+      console.log(email);
+      console.log(photo);
+      localStorage.setItem("firstname", firstname);
+      localStorage.setItem("lastname", lastname);
+      localStorage.setItem("email", email);
+      localStorage.setItem("photo", photo);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
 export const signInWithGoogle = () => {
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
     .then((re) => {
       console.log(re);
-      const name = re.user.displayName;
-      const email = re.email.email;
+      const firstname = re._tokenResponse.firstName;
+      const lastname = re._tokenResponse.lastName;
+      const email = re.user.email;
       const photo = re.user.photoURL;
-      localStorage.setItem("name", name);
+      localStorage.setItem("firstname", firstname);
+      localStorage.setItem("lastname", lastname);
       localStorage.setItem("email", email);
       localStorage.setItem("photo", photo);
     })

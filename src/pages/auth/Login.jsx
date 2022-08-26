@@ -13,7 +13,11 @@ import { useForm } from "react-hook-form";
 import "./ContainerModal.css";
 
 import { useNavigate } from "react-router-dom";
-import { UserAuth, signInWithGoogle } from "../../context/AuthContext";
+import {
+  UserAuth,
+  signInWithGoogle,
+  signInWithFacebook,
+} from "../../context/AuthContext";
 
 import Copyright from "../../shared/Copyright";
 import { ModalContext } from "../../context/ModalContext";
@@ -41,7 +45,7 @@ export default function SignIn({ onClick }) {
         setModal("");
         // navigate("/");
         if (data.email == "breeze_admin@yahoo.com") {
-          navigate("/adminpanel");
+          navigate("/");
           localStorage.setItem("is_admin", "true");
         } else {
           navigate("/");
@@ -51,7 +55,10 @@ export default function SignIn({ onClick }) {
         }
       }, 1000);
     } catch (error) {
-      setSnackData({ msg: error.message, severity: "error" });
+      setSnackData({
+        msg: "There's a Problem with the data you entered",
+        severity: "error",
+      });
       setOpen(true);
     }
     reset();
@@ -71,6 +78,9 @@ export default function SignIn({ onClick }) {
     formState: { errors },
   } = useForm();
 
+  const popOut = () => {
+    setOpen(false);
+  };
   return (
     <>
       <Container
@@ -150,9 +160,16 @@ export default function SignIn({ onClick }) {
             <Button onClick={signInWithGoogle}>
               <Google></Google>
             </Button>
-            <Button>
+
+            <Button
+              onClick={() => {
+                signInWithFacebook();
+              }}
+            >
               <Facebook></Facebook>
+              <Button onClick={popOut}></Button>
             </Button>
+
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <p className="text-color">
