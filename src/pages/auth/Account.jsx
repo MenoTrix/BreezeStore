@@ -112,9 +112,9 @@ export default function Account() {
               />
             </div>
 
-            <button type="button" className="btn btn-outline-primary my-4">
+            {/* <button type="button" className="btn btn-outline-primary my-4">
               Save Changes
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
