@@ -87,8 +87,8 @@ export const signInWithFacebook = () => {
       console.log(re);
       const firstname = re._tokenResponse.firstName;
       const lastname = re._tokenResponse.lastName;
-      const email = re.user.email;
-      const photo = re.user.photoURL;
+      const email = re._tokenResponse.email;
+      const photo = re._tokenResponse.photoURL;
       console.log(email);
       console.log(photo);
       localStorage.setItem("firstname", firstname);
