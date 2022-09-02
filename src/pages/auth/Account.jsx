@@ -8,6 +8,11 @@ import { Link } from "react-router-dom";
 
 export default function Account() {
   const { userData } = useContext(AccountContext);
+  console.log(userData);
+
+  const UserDatafirst = localStorage.getItem("firstName");
+  const UserDatalast = localStorage.getItem("lastName");
+  const UserDataemail = localStorage.getItem("email");
   const Userfirst = localStorage.getItem("firstname");
   const Userlast = localStorage.getItem("lastname");
   const Useremail = localStorage.getItem("email");
@@ -151,7 +156,7 @@ export default function Account() {
 
               <div className="col-md-6 col-sm-6 me-5 d-flex align-items-center ">
                 <h5 className="fs-6">
-                  {userData.firstName} {userData.lastName}
+                  {UserDatafirst} {UserDatalast}
                 </h5>
               </div>
             </div>
@@ -181,33 +186,7 @@ export default function Account() {
         <div className="col-md-8 offset-md-1">
           <div className="p-3 shadow">
             <h1>Personal Information</h1>
-            <div>
-              <label htmlFor="firstName" className="form-label">
-                First Name :
-              </label>
-              <input
-                type="text"
-                name="firstName"
-                className="form-control"
-                placeholder="First Name"
-                value={userData.firstName}
-                required
-              />
-            </div>
 
-            <div>
-              <label htmlFor="lastName" className="form-label">
-                Last Name :
-              </label>
-              <input
-                type="text"
-                name="lastName"
-                className="form-control"
-                placeholder="Last Name"
-                value={userData.lastName}
-                required
-              />
-            </div>
             <div className="mt-3">
               <label htmlFor="email" className="form-label">
                 Email Address :
@@ -217,27 +196,10 @@ export default function Account() {
                 name="email"
                 className="form-control"
                 placeholder="Email Address"
-                value={userData.email}
+                value={UserDataemail}
                 required
               />
             </div>
-            <div className="mt-3">
-              <label htmlFor="password" className="form-label">
-                Password :
-              </label>
-              <input
-                type="password"
-                name="password"
-                className="form-control"
-                placeholder="Password"
-                value={userData.password}
-                required
-              />
-            </div>
-
-            <button type="button" className="btn btn-outline-primary my-4">
-              Save Changes
-            </button>
           </div>
         </div>
       </div>

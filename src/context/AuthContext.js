@@ -24,21 +24,28 @@ export const AuthContextProvider = ({ children }) => {
     createUserWithEmailAndPassword(auth, email, password);
     setDoc(doc(db, "users", email), {
       userData: { firstName, lastName, email, password },
-      favorites: [],
-      inCart: [],
     });
+    localStorage.setItem("firstName", firstName);
+    localStorage.setItem("lastName", lastName);
+    localStorage.setItem("email", email);
+    console.log("Local Sotage firt is " + firstName);
+    console.log("Local Sotage last is " + lastName);
+    console.log("Local Sotage Email is " + email);
   };
 
   const login = (email, password) => {
+    localStorage.setItem("email", email);
+    console.log("Local Sotage Email is " + email);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const logOut = () => {
     localStorage.removeItem("firstname");
     localStorage.removeItem("lastname");
-    // localStorage.removeItem("name");
     localStorage.removeItem("photo");
     localStorage.removeItem("email");
+    localStorage.removeItem("firstName");
+    localStorage.removeItem("lastName");
     return signOut(auth);
   };
 
