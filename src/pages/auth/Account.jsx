@@ -186,7 +186,6 @@ export default function Account() {
         <div className="col-md-8 offset-md-1">
           <div className="p-3 shadow">
             <h1>Personal Information</h1>
-
             <div className="mt-3">
               <label htmlFor="email" className="form-label">
                 Email Address :
