@@ -24,6 +24,8 @@ export const AuthContextProvider = ({ children }) => {
     createUserWithEmailAndPassword(auth, email, password);
     setDoc(doc(db, "users", email), {
       userData: { firstName, lastName, email, password },
+      favorites: [],
+      inCart: [],
     });
     localStorage.setItem("firstName", firstName);
     localStorage.setItem("lastName", lastName);
